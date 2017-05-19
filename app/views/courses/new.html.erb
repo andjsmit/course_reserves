@@ -1,0 +1,36 @@
+<%= form_for :course do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :course_number %>
+    <%= f.text_field :course_number %>
+  </p>
+
+  <p>
+    <%# TODO: This should be replaced with select or autocomplete %>
+    <%= f.label :department %>
+    <%= f.text_field :deparment %>
+  </p>
+
+  <p>
+    <%# TODO: Need to add hint heare (and probably elsewhere) %>
+    <%= f.label :course_instructor %>
+    <%= f.text_field :course_instructor %>
+  </p>
+
+  <p>
+    <%= f.radio_button(:procesing_library, "university") %>
+    <%= f.label(:processing_library_university, "University Library") %>
+    <%= f.radio_button(:procesing_library, "herron") %>
+    <%= f.label(:processing_library_herron, "Herron Art Library") %>
+  </p>
+
+  <p>
+    <%# TODO: Needs to be a select box? %>
+    <%= f.label :semester %>
+    <%= f.text_field :semester %>
+  </p>
+<% end %>
